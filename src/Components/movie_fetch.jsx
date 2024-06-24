@@ -89,7 +89,8 @@ const FetchData = () => {
           ))}
         </div>
         
-        <h2>Filter Results</h2>
+
+        <h2>Search Results</h2>
         <div>
           <input
             type="text"
@@ -98,8 +99,6 @@ const FetchData = () => {
             onChange={handleYearFilterChange}
           />
         </div>
-
-        <h2>Search Results</h2>
         <div className="movie-list">
           {filteredMovies.map((movie) => (
             <div key={movie.imdbID} className="movie-item">
