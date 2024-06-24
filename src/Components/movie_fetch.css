@@ -1,0 +1,17 @@
+.movie-list, .favorite-list {
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+  }
+  
+  .movie-item, .favorite-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .movie-item img, .favorite-item img {
+    width: 100px;
+    height: 150px;
+  }
