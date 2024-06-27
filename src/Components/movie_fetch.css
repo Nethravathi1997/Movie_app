@@ -1,3 +1,27 @@
+#home{
+  background-color: #333;
+  max-height: 100%;
+  width: 100%;
+  margin-top: -0.5cm;
+}
+.h1{
+  text-align: left;
+  color: #E50914;
+  padding-left: 2cm;
+  padding-top: 1cm;
+  
+  font-family: Arial, sans-serif;
+  font-size: 34px;
+}
+
+.ip1{
+  background-color: #333;
+  padding: 20px;
+
+  
+  margin-top: 1cm;
+}
+
 .movie-list, .favorite-list {
     display: grid;
     grid-template-columns: repeat(3,30%);

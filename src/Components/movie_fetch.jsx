@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./movie_fetch.css";
+import Carousel from './Carousel';
 
 const FetchData = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -13,7 +14,7 @@ const FetchData = () => {
         if (searchTerm.trim() !== '') {
           fetchMovies();
         } else {
-          setMovies([]); // Clear search results if the search term is empty
+          setMovies([]); 
         }
       }, 500);
   
@@ -65,17 +66,26 @@ const FetchData = () => {
     );
 
     return (
-      <div>
-        <h2>Movie Search</h2>
-        <div>
-          <input
-            type="text"
-            placeholder="Search movies by title..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
+      <div id='home'>
+        <div style={{display:"flex",justifyContent:"space-between",marginRight:"10%"}}>
+          <h2 className='h1'>Movie Search</h2>
+          <div>
+            <input
+              className='ip1'
+              type="text"
+              placeholder="Search movies by title..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+          </div>
         </div>
 
+        {!searchTerm && (
+          <div>
+            <Carousel />
+          </div>
+        )}
+        
         {isLoading && <div>Loading...</div>}
 
         <h2>Favorites</h2>
@@ -89,7 +99,6 @@ const FetchData = () => {
           ))}
         </div>
         
-
         <h2>Search Results</h2>
         <div>
           <input
@@ -108,8 +117,6 @@ const FetchData = () => {
             </div>
           ))}
         </div>
-
-       
       </div>
     );
 };
